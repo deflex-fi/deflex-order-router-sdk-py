@@ -31,7 +31,7 @@ algodToken = {
 	'X-API-Key': '<INSERT_ALGOD_TOKEN>'
 }
 algodPort = ''
-apiKey = '' # reach out to phil@deflex.com to get custom API key with higher rate limit
+apiKey = '' # reach out to phil@alammex.com to get custom API key with higher rate limit
 algod = algod.AlgodClient(algodToken['X-API-Key'], algodUri, algodToken)
 params = algod.suggested_params()
 inputAssetId = 0
