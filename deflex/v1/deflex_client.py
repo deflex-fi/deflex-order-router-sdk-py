@@ -38,10 +38,10 @@ class DeflexOrderRouterClient:
         })
         return DeflexQuote.from_api_response(apiResponse)
 
-    def get_swap_quote_transactions(self, address: str, quote: DeflexQuote, slippage):
+    def get_swap_quote_transactions(self, address: str, txnPayload, slippage):
         apiResponse = fetch_api_data('fetchExecuteSwapTxns', {
             'address': address,
-            'txnPayloadJSON': quote.txnPayload,
+            'txnPayloadJSON': txnPayload,
             'slippage': slippage,
             'apiKey': self.apiKey
         }, True)

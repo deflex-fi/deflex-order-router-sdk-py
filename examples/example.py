@@ -38,7 +38,7 @@ slippage = 5
 
 txnGroup = client.get_swap_quote_transactions(
 	senderAddress,
-	quote,
+	quote.txnPayload,
 	slippage
 )
 
